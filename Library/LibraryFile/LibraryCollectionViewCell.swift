@@ -20,5 +20,6 @@ class LibraryCollectionViewCell: UICollectionViewCell {
         titleLabel.text = data.title
         
         rateLabel.text = "\(data.rate)"
+        
     }
 }

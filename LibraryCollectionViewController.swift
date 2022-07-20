@@ -6,11 +6,14 @@
 //
 
 import UIKit
-
+import Kingfisher
 
 class LibraryCollectionViewController: UICollectionViewController {
     
     var bookList = BookInfo()
+    var arrImageName: [String] = ["신과함께인과연", "신과함께죄와벌", "아바타", "도둑들", "명량", "베테랑", "부산행", "알라딘", "암살"]
+        
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +47,12 @@ class LibraryCollectionViewController: UICollectionViewController {
         cell.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
         cell.layer.cornerRadius = 20
         
-        cell.titleLabel.text = "dd"
-        cell.rateLabel.text = "0.4"
-//        cell.posterImage 
+//        cell.titleLabel.text = "dd"
+//        cell.rateLabel.text = "0.4"
+        let data = bookList.book[indexPath.row]
+        cell.configureCell(data: data)
+        
+        cell.posterImage.image = UIImage(named: arrImageName[indexPath.row])
         
         return cell
     }
