@@ -11,8 +11,6 @@ import Kingfisher
 class LibraryCollectionViewController: UICollectionViewController {
     
     var bookList = BookInfo()
-    var arrImageName: [String] = ["신과함께인과연", "신과함께죄와벌", "아바타", "도둑들", "명량", "베테랑", "부산행", "알라딘", "암살"]
-        
     
     
     override func viewDidLoad() {
